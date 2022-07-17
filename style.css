@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap");
+/*
+font-family: 'IBM Plex Sans', sans-serif;
+font-family: 'Oswald', sans-serif;
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.topbar {
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  color: white;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 5px;
+}
+
+.f-img {
+  margin-top: 1.5rem;
+  width: 1280px;
+  overflow: hidden;
+  margin: 3rem auto;
+  height: 550px;
+}
+.f-img img {
+  display: block;
+  width: 100%;
+  margin: -289px 0;
+}
+
+#btn {
+  width: 1280px;
+  height: 550px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#btn button {
+  background-color: transparent;
+  color: white;
+  padding: 15px 67px;
+  border: 1px solid white;
+  justify-content: center;
+  letter-spacing: 3px;
+  font-size: 14px;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  transition: 0.5s ease-in;
+  cursor: pointer;
+}
+
+#btn button:hover {
+  box-shadow: inset 300px 0 0 0 white;
+  color: black;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: 100vh;
+  flex-direction: row-reverse;
+  max-width: 1280px;
+  margin: 0 auto;
+  justify-content: flex-end;
+}
+
+.container .left-content {
+  max-width: 600px;
+  margin-left: 4rem;
+}
+
+.container .left-content #entry {
+  display: grid;
+}
+.container .left-content #entry #f-1 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  color: #9b9b9b;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+.container .left-content #entry #f-2 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  color: #2d3339;
+  font-size: 40px;
+}
+.container #improvement {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  margin-left: 1rem;
+  margin-top: 10px;
+}
+.container #improvement #text-1 {
+  margin-bottom: 1rem;
+}
+.container #improvement #text-3 {
+  margin-top: 1rem;
+}
+
+.conclusion {
+  text-align: left;
+}
+.conclusion span {
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+}
+.conclusion #achievements {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+.conclusion #achievements ul {
+  list-style: none;
+  margin-left: 1rem;
+  margin-top: 5px;
+}
+
+#socialmedia {
+  margin-top: 2rem;
+  margin-left: 1rem;
+}
+#socialmedia a {
+  text-decoration: none;
+  align-items: center;
+  display: flex;
+}
+#socialmedia span {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: black;
+  margin-left: 10px;
+}
+#socialmedia ion-icon {
+  width: 17px;
+  height: 17px;
+  text-align: center;
+  color: black;
+}
+
+.container .right-content img {
+  max-width: 450px;
+  min-width: 450px;
+  max-height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 10px solid black;
+  border-top: 10px solid red;
+  -webkit-animation: animate 8.5s infinite linear;
+          animation: animate 8.5s infinite linear;
+  z-index: 999999;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@media (max-width: 991.98px) {
+  .container {
+    flex-direction: column-reverse;
+    min-height: 0;
+  }
+  .container .right-content img {
+    display: none;
+  }
+  .container .left-content {
+    max-width: 100%;
+    margin-top: 2rem;
+    margin: 2rem 0 2rem 0 !important;
+  }
+  .f-img {
+    display: flex;
+    margin: 0;
+    width: 100%;
+    height: 800px;
+  }
+  .f-img img {
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .f-img #btn {
+    width: 100%;
+    height: 800px;
+  }
+}
+@media (max-width: 767.98px) {
+  .container .left-content {
+    margin: 2rem 0 2rem 0 !important;
+  }
+  .f-img {
+    width: 100%;
+    height: 550px;
+  }
+  .f-img img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin: 0;
+  }
+  .f-img #btn {
+    width: 100%;
+    height: 550px;
+  }
+}/*# sourceMappingURL=style.css.map */
